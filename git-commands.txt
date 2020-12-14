@@ -1,0 +1,152 @@
+hello.java
+3 lines     -> VCS will store it
+
+1 more line  -> VCS will store it
+
+.deb
+.dpkg
+.dll
+
+1 file which 20,000
+100's of small files
+dependency files
+config files
+
+A VCS tool should allow us to store/versionize files and folders easily.
+We should be able to easily compare between the versions of the file
+We should be easily able to restore a previous version of the file in case of a issue
+We should be able to merge between same code repos
+Ability to collaborate
+
+Infrastructure as a Code: IaC Tools: Terraform
+COnfiguration management tools: Ansible
+
+everything as a Code
+
+Repository:
+It is a folder with the source code + version history
+ordersummary
+source code - src logs config main.java directory ( all the changes are tracked and they are stored )
+version history
+
+Local Repository: Local Machine
+Remote/Central Repository: The actual location where the VCS tool is installed
+
+When we download the code through Distributed based VCS
+We get to have a local copy + version history ( all changed made on the code )
+
+All changes made will be local only
+And we can push them to central when we are comfortable.
+
+SVN to GIT
+
+We have a new application, which we are starting newly.
+We will create a new repository in the local
+
+                            git status
+Working Directory                      Version History (.GIT) where all changes
+Hello.java					does not have any clue about the file
+
+COMMIT:
+When we store a file/files in the git tool its called a commit.
+It will be stored inside the .git diectory
+
+Hello.java  ->  it will take the file Hello.java and store it inside the .git dir
+
+Hello.java  -> again it will store the changed file inside the .git
+
+It is all the local workflow.
+PULL/PUSH
+
+It will first restore the file from version hsitory to your working directory
+
+then we will again add and commit the file back.
+History is not being changed/edited.
+------------
+ls
+git status
+cd orderSummary/
+ls -a
+ls
+vi Hello.java
+ls
+vi readme.md
+ls
+git status
+ls
+ls -a
+ls
+git add Hello.java readme.md
+git status
+git commit -m "Added a comment line on hello.java and new file readme.md"
+git status
+ls
+git log
+git log -n 1
+git log --stats
+git log --stat
+ls
+vi Hello.java
+git status
+ls -a
+git diff
+git add Hello.java
+git status
+git diff
+ls
+git diff --staged
+git reset HEAD Hello.java
+git status
+ls
+vi Hello.java
+git status
+git add Hello.java
+git commit -m "Added a new print statement to Hello.java"
+git status
+ls
+git log
+git diff HEAD~1
+git diff HEAD~2
+git diff HEAD~2 Hello.java
+git log --oneline
+git diff e3a98cd 164b1ea
+ls
+vi Hello.java
+git status
+git add .
+git status
+git commit -m "Added a new comment line for the new code"
+git log
+cat Hello.java
+git diff HEAD~2 Hello.java
+git checkout HEAD~2 Hello.java
+cat Hello.java
+git status
+vi Hello.java
+git add Hello.java
+git commit -m "restored the hello.java from 164b1eac"
+git log
+ls -a
+history
+---------
+We should be residing in the destination branch
+
+branch-1 to be taken and applied on master branch
+10 changes  -----------------------> master
+
+residing in master branch
+git merge branch-1
+
+
+
+Branching Strategy/Workflow
+
+Git Flow Workflow/Branching Strategy: Developers enterprise app
+
+Feature Branching Strategy: agile, devops
+
+
+Hot Fix: When we update master branch from another feature without much testing.
+Aug 1st -> Aug 21st
+
+Aug 10th ->
